@@ -1,2 +1,5 @@
 # rock-paper-scissors
-SImple game using HTML/CSS/JS. Part of the TOP module.
+---
+Classic game recreated using HTML/CSS/JS.
+
+[👉 Live Demo 👈](https://justin-chhay.github.io/rock-paper-scissors/)
