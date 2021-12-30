@@ -1,7 +1,7 @@
 # rock-paper-scissors
 ---
-Classic game recreated using HTML/CSS/JS.
+A classic game that I recreated using HTML/CSS/JS.
 
-Game works via console (Ctrl-Shift-I). GUI coming very soon, WIP
+Part of The Odin Project.
 
 [👉 Live Demo 👈](https://justin-chhay.github.io/rock-paper-scissors/)
