@@ -49,7 +49,7 @@ buttons.forEach((button) => {
         playerSelection = button.id;
         console.log(playerSelection);
         playRound(playerSelection, computerSelection);
-        if ((playerScore + computerScore) === 5) {
+        if (playerScore === 5 || computerScore === 5) {
             endGame();
         }
     });
@@ -63,6 +63,7 @@ function endGame() {
     //Game results
     console.log("player score = " + playerScore);
     console.log("computer score = " + computerScore);
+
     if (playerScore === computerScore)
         return alert("tie game");
     else if (playerScore < computerScore)
