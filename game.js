@@ -14,6 +14,8 @@ let computerSelection = "";
 //DOM Variables
 let buttons = document.querySelectorAll(".button");
 const roundResult = document.querySelector("#results-container");
+const pScore = document.querySelector(".playerscore");
+const cpuScore = document.querySelector(".compscore");
 
 
 //Randomly generates computer decision
@@ -23,7 +25,6 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
 
-    //loop through turn in case user misspells
     let playerAns = choices.indexOf(playerSelection.toLowerCase());
     let computerAns = choices.indexOf(computerSelection.toLowerCase());
 
@@ -49,6 +50,7 @@ buttons.forEach((button) => {
         playerSelection = button.id;
         console.log(playerSelection);
         playRound(playerSelection, computerSelection);
+        updateScores();
         if (playerScore === 5 || computerScore === 5) {
             endGame();
         }
@@ -59,15 +61,35 @@ function displayResult(result) {
     roundResult.textContent = result;
 }
 
+
+function updateScores() {
+    pScore.textContent = playerScore;
+    cpuScore.textContent = computerScore;
+}
+
 function endGame() {
-    //Game results
-    console.log("player score = " + playerScore);
-    console.log("computer score = " + computerScore);
 
     if (playerScore === computerScore)
-        return alert("tie game");
+        alert("TIE GAME");
     else if (playerScore < computerScore)
-        return alert("YOU LOST to a literal bot");
+        alert("YOU LOST TO A LITERAL BOT");
     else
-        return alert("YOU WON");
+        alert("YOU WON");
+
+    if (confirm("Reset Game?")) {
+        resetGame();
+    } else { //credits
+        credits();
+    }
+}
+
+function resetGame() {
+    alert("GAME RESET");
+    playerScore = 0;
+    computerScore = 0;
+    updateScores();
+}
+
+function credits() {
+    document.location.replace("./credits.html");
 }

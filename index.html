@@ -5,7 +5,8 @@
     <title>Rock/Paper/Scissors</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" href="./resc/favicon.ico">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -18,36 +19,41 @@
     <div id="container">
 
         <div id="header">
-            <h1 id="game-name"> Rock Paper Scissors!</h1>
-        </div>
-
-        <div id="results-container">
+            <h1 id="game-name"> じゃんけん! </h1>
         </div>
 
         <div id="game-container">
             <div class="input-container">
                 <button id="rock" class="button">
-                    <img src=" " alt="Rock">
+                    <img src="./resc/rock.png" alt="Rock">
                 </button>
                 <button id="paper" class="button">
-                    <img src=" " alt="Paper">
-
+                    <img src="./resc/paper.png" alt="Paper">
                 </button>
                 <button id="scissors" class="button">
-                    <img src=" " alt="Scissors">
-
+                    <img src="./resc/scissors.png" alt="Scissors">
                 </button>
+            </div>
+        </div>
+
+        <div id="results-container">
+        </div>
+
+        <div id="scores-container">
+            <div class="player-score-container">
+                <h3>You</h3>
+                <p class="playerscore">0</p>
+            </div>
+            <div class="cpu-score-container">
+                <h3>Computer</h3>
+                <p class="compscore">0</p>
             </div>
         </div>
 
         <div id="footer">
             <p>
-                justin-chhay |
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>
+                <a class="link" href="https://github.com/justin-chhay">justin-chhay <i class="fab fa-github-square"></i> </a>
             </p>
-            <a href="https://github.com/justin-chhay"><i class="fab fa-github"></i></a>
         </div>
     </div>
 </body>
