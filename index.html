@@ -5,14 +5,51 @@
     <title>Rock/Paper/Scissors</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./resc/favicon.ico">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <script src="https://kit.fontawesome.com/249e375346.js" crossorigin="anonymous"></script>
 
-    <link rel="icon" href="./resc/favicon.ico">
+
     <script src="game.js" defer></script>
 </head>
 
 <body>
+    <div id="container">
+
+        <div id="header">
+            <h1> Rock Paper Scissors!</h1>
+        </div>
+
+        <div id="results-container"></div>
+
+        <div id="game-container">
+            <div class="input-container">
+                <button id="rock" class="button">
+                    <img src=" " alt="Rock">
+                </button>
+                <button id="paper" class="button">
+                    <img src=" " alt="Paper">
+
+                </button>
+                <button id="scissors" class="button">
+                    <img src=" " alt="Scissors">
+
+                </button>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p>
+                justin-chhay |
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+            </p>
+            <a href="https://github.com/justin-chhay"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
 </body>
 
 </html>
